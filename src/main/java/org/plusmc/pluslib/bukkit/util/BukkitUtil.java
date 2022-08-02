@@ -8,7 +8,7 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.plusmc.pluslib.bukkit.PlusLibBukkit;
-import org.plusmc.pluslib.reflect.spigotpaper.timings.ITimings;
+import org.plusmc.pluslibcore.reflect.spigotpaper.timings.ITimings;
 
 import java.lang.reflect.Method;
 import java.util.*;

@@ -5,8 +5,8 @@ import net.md_5.bungee.api.ProxyServer;
 import net.md_5.bungee.api.plugin.Plugin;
 import net.md_5.bungee.api.scheduler.ScheduledTask;
 import net.md_5.bungee.api.scheduler.TaskScheduler;
-import org.plusmc.pluslib.mongo.DatabaseHandler;
-import org.plusmc.pluslib.reflect.bungeespigot.config.IConfig;
+import org.plusmc.pluslibcore.mongo.DatabaseHandler;
+import org.plusmc.pluslibcore.reflect.bungeespigot.config.IConfig;
 
 import java.io.File;
 import java.io.IOException;

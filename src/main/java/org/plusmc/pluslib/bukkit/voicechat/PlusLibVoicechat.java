@@ -9,9 +9,9 @@ import de.maxhenkel.voicechat.api.opus.OpusEncoder;
 import de.maxhenkel.voicechat.api.opus.OpusEncoderMode;
 import org.bukkit.Bukkit;
 import org.plusmc.pluslib.bukkit.PlusLibBukkit;
-import org.plusmc.pluslib.reflect.bungeespigot.config.ConfigEntry;
-import org.plusmc.pluslib.reflect.bungeespigot.config.IConfig;
-import org.plusmc.pluslib.util.FileUtil;
+import org.plusmc.pluslibcore.reflect.bungeespigot.config.ConfigEntry;
+import org.plusmc.pluslibcore.reflect.bungeespigot.config.IConfig;
+import org.plusmc.pluslibcore.util.FileUtil;
 
 import java.io.File;
 import java.nio.ShortBuffer;

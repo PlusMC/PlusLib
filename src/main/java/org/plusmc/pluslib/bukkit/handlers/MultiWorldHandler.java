@@ -20,7 +20,7 @@ import org.bukkit.event.world.WorldEvent;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.jetbrains.annotations.Nullable;
 import org.plusmc.pluslib.bukkit.util.BukkitUtil;
-import org.plusmc.pluslib.util.FileUtil;
+import org.plusmc.pluslibcore.util.FileUtil;
 
 import java.io.File;
 import java.util.ArrayList;
