@@ -136,18 +136,12 @@
         <dependency>
             <groupId>org.plusmc</groupId>
             <artifactId>PlusLib-Core</artifactId>
-            <version>${project.version}</version>
+            <version>0.12-INDEV</version>
         </dependency>
         <dependency>
             <groupId>org.spigotmc</groupId>
             <artifactId>spigot-api</artifactId>
             <version>1.19-R0.1-SNAPSHOT</version>
-            <scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>io.papermc.paper</groupId>
-            <artifactId>paper-api</artifactId>
-            <version>1.18.2-R0.1-SNAPSHOT</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
