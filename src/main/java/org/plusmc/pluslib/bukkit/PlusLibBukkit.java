@@ -2,6 +2,9 @@ package org.plusmc.pluslib.bukkit;
 
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
+import org.plusmc.pluslib.bukkit.managing.BaseManager;
+import org.plusmc.pluslib.bukkit.managing.PlusCommandManager;
+import org.plusmc.pluslib.bukkit.managing.TickingManager;
 import org.plusmc.pluslib.bukkit.util.BukkitUtil;
 import org.plusmc.pluslib.bukkit.util.BungeeUtil;
 import org.plusmc.pluslib.bukkit.voicechat.PlusLibVoicechat;
@@ -80,6 +83,9 @@ public final class PlusLibBukkit extends JavaPlugin {
             getLogger().info("VoiceChat detected, enabling VoiceChat support");
             PlusLibVoicechat.createInstance(config.section("VoiceChat"));
         }
+        BaseManager.createManager(PlusCommandManager.class, this);
+        BaseManager.createManager(TickingManager.class, this);
+        BaseManager.registerAny(new Test(), this);
 
         Bukkit.getPluginManager().registerEvents(new BukkitUtil.Listener(), this);
     }
