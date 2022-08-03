@@ -9,8 +9,8 @@ import de.maxhenkel.voicechat.api.opus.OpusEncoder;
 import de.maxhenkel.voicechat.api.opus.OpusEncoderMode;
 import org.bukkit.Bukkit;
 import org.plusmc.pluslib.bukkit.PlusLibBukkit;
-import org.plusmc.pluslibcore.reflect.bungeespigot.config.ConfigEntry;
-import org.plusmc.pluslibcore.reflect.bungeespigot.config.IConfig;
+import org.plusmc.pluslibcore.reflection.bungeebukkit.config.ConfigEntry;
+import org.plusmc.pluslibcore.reflection.bungeebukkit.config.InjectableConfig;
 import org.plusmc.pluslibcore.util.FileUtil;
 
 import java.io.File;
@@ -32,7 +32,7 @@ public class PlusLibVoicechat implements VoicechatPlugin {
         queue = new ArrayList<>();
     }
 
-    public static void createInstance(IConfig config) {
+    public static void createInstance(InjectableConfig config) {
         if (instance != null) {
             PlusLibBukkit.getInstance().getLogger().warning("Voicechat Plugin is already initialized!");
             return;
@@ -43,7 +43,7 @@ public class PlusLibVoicechat implements VoicechatPlugin {
         if (service != null) {
             PlusLibBukkit.getInstance().getLogger().info("Registering Voicechat Plugin...");
             instance = new PlusLibVoicechat();
-            config.writeIntoObject(instance);
+            config.inject(instance);
             if (!instance.useVoiceChat) {
                 PlusLibBukkit.getInstance().getLogger().info("Voicechat Plugin is disabled in config!");
                 return;

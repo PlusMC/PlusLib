@@ -6,7 +6,7 @@ import org.plusmc.pluslib.bukkit.util.BukkitUtil;
 import org.plusmc.pluslib.bukkit.util.BungeeUtil;
 import org.plusmc.pluslib.bukkit.voicechat.PlusLibVoicechat;
 import org.plusmc.pluslibcore.mongo.DatabaseHandler;
-import org.plusmc.pluslibcore.reflect.bungeespigot.config.IConfig;
+import org.plusmc.pluslibcore.reflection.bungeebukkit.config.InjectableConfig;
 
 import java.io.File;
 import java.io.IOException;
@@ -62,9 +62,9 @@ public final class PlusLibBukkit extends JavaPlugin {
         Bukkit.getMessenger().registerIncomingPluginChannel(this, PLUSMC_BUNGEE, util);
 
         saveDefaultConfig();
-        IConfig config;
+        InjectableConfig config;
         try {
-            config = IConfig.create(new File(getDataFolder(), "config.yml"));
+            config = InjectableConfig.create(new File(getDataFolder(), "config.yml"));
         } catch (IOException e) {
             throw new IllegalStateException("Could not load config", e);
         }

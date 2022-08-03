@@ -5,7 +5,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 import org.bukkit.scheduler.BukkitTask;
 import org.plusmc.pluslib.bukkit.managed.Loadable;
 import org.plusmc.pluslib.bukkit.managed.Tickable;
-import org.plusmc.pluslibcore.reflect.spigotpaper.timings.ITimings;
+import org.plusmc.pluslibcore.reflection.bukkitpaper.timings.WrappedTimings;
 
 import java.util.*;
 
@@ -14,7 +14,7 @@ import java.util.*;
  */
 @SuppressWarnings("unused")
 public class TickingManager extends BaseManager {
-    private List<Map.Entry<Tickable, ITimings>> tickables;
+    private List<Map.Entry<Tickable, WrappedTimings>> tickables;
     private List<Tickable> markForRemoval;
     private BukkitTask tickingTask;
     private BukkitTask asyncTickingTask;
@@ -36,10 +36,10 @@ public class TickingManager extends BaseManager {
     }
 
     private void tick() {
-        for (Iterator<Map.Entry<Tickable, ITimings>> iterator = tickables.iterator(); iterator.hasNext(); ) {
-            Map.Entry<Tickable, ITimings> entry = iterator.next();
+        for (Iterator<Map.Entry<Tickable, WrappedTimings>> iterator = tickables.iterator(); iterator.hasNext(); ) {
+            Map.Entry<Tickable, WrappedTimings> entry = iterator.next();
             Tickable tickable = entry.getKey();
-            ITimings timings = entry.getValue();
+            WrappedTimings timings = entry.getValue();
             if (markForRemoval.contains(tickable)) {
                 iterator.remove();
                 markForRemoval.remove(tickable);
@@ -59,10 +59,10 @@ public class TickingManager extends BaseManager {
     }
 
     private void asyncTick() {
-        for (Iterator<Map.Entry<Tickable, ITimings>> iterator = tickables.iterator(); iterator.hasNext(); ) {
-            Map.Entry<Tickable, ITimings> entry = iterator.next();
+        for (Iterator<Map.Entry<Tickable, WrappedTimings>> iterator = tickables.iterator(); iterator.hasNext(); ) {
+            Map.Entry<Tickable, WrappedTimings> entry = iterator.next();
             Tickable tickable = entry.getKey();
-            ITimings timings = entry.getValue();
+            WrappedTimings timings = entry.getValue();
             if (markForRemoval.contains(tickable)) {
                 iterator.remove();
                 markForRemoval.remove(tickable);
@@ -89,7 +89,7 @@ public class TickingManager extends BaseManager {
     @Override
     protected void register(Loadable loadable) {
         if (!(loadable instanceof Tickable tickable)) return;
-        tickables.add(new HashMap.SimpleEntry<>(tickable, ITimings.create(getPlugin(), tickable.getName() + "-(tickable)")));
+        tickables.add(new HashMap.SimpleEntry<>(tickable, WrappedTimings.create(getPlugin(), tickable.getName() + "-(tickable)")));
         getPlugin().getLogger().info("Registered " + tickable.getName() + " to the ticking manager.");
     }
 
