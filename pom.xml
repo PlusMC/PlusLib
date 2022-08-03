@@ -6,7 +6,7 @@
 
     <groupId>org.plusmc</groupId>
     <artifactId>PlusLib</artifactId>
-    <version>0.12-INDEV</version>
+    <version>0.12.1-INDEV</version>
     <packaging>jar</packaging>
 
     <name>PlusLib</name>
@@ -58,6 +58,7 @@
                         <configuration>
                             <artifactSet>
                                 <includes>
+                                    <include>org.plusmc</include>
                                     <include>org.mongodb</include>
                                     <include>org.mongodb.morphia</include>
                                     <include>systems.manifold</include>
@@ -134,11 +135,6 @@
 
     <dependencies>
         <dependency>
-            <groupId>org.plusmc</groupId>
-            <artifactId>PlusLib-Core</artifactId>
-            <version>0.12-INDEV</version>
-        </dependency>
-        <dependency>
             <groupId>org.spigotmc</groupId>
             <artifactId>spigot-api</artifactId>
             <version>1.19-R0.1-SNAPSHOT</version>
@@ -161,6 +157,11 @@
             <artifactId>voicechat-api</artifactId>
             <version>2.2.39</version>
             <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.plusmc</groupId>
+            <artifactId>PlusLib-Core</artifactId>
+            <version>0.12-INDEV</version>
         </dependency>
     </dependencies>
 

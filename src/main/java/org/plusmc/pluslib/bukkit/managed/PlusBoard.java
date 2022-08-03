@@ -31,6 +31,18 @@ public abstract class PlusBoard implements Tickable {
         objective.setDisplaySlot(DisplaySlot.SIDEBAR);
     }
 
+    protected PlusBoard(String title, Scoreboard scoreboard) {
+        scores = new ArrayList<>();
+        if (Bukkit.getScoreboardManager() == null) {
+            throw new IllegalStateException("Scoreboard manager is null");
+        }
+        this.scoreboard = scoreboard;
+        scoreboard.clearSlot(DisplaySlot.SIDEBAR);
+        objective = scoreboard.registerNewObjective(title, "dummy", title);
+        objective.setDisplaySlot(DisplaySlot.SIDEBAR);
+    }
+
+
     //added a bunch of comments cause this shit is pretty confusing
     //im going to cry if this doesn't work
     @Override
