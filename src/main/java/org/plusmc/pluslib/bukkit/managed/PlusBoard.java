@@ -17,9 +17,8 @@ import java.util.Map;
  */
 public abstract class PlusBoard implements Tickable {
     private final Scoreboard scoreboard;
-    private final Objective objective;
-
     private final List<Score> scores;
+    private Objective objective;
 
     protected PlusBoard(String title) {
         scores = new ArrayList<>();
@@ -38,7 +37,12 @@ public abstract class PlusBoard implements Tickable {
         }
         this.scoreboard = scoreboard;
         scoreboard.clearSlot(DisplaySlot.SIDEBAR);
+        objective = scoreboard.getObjective(title);
+        if (objective != null)
+            objective.unregister();
+
         objective = scoreboard.registerNewObjective(title, "dummy", title);
+
         objective.setDisplaySlot(DisplaySlot.SIDEBAR);
     }
 
