@@ -74,7 +74,7 @@ public final class PlusLibBukkit extends JavaPlugin {
         Bukkit.getScheduler().runTaskTimer(this, () -> {
             if (DatabaseHandler.getInstance() != null && DatabaseHandler.getInstance().isLoaded())
                 DatabaseHandler.getInstance().updateCache();
-        }, 600, 600);
+        }, 100, 600);
 
         if (Bukkit.getPluginManager().isPluginEnabled("voicechat")) {
             getLogger().info("VoiceChat detected, enabling VoiceChat support");

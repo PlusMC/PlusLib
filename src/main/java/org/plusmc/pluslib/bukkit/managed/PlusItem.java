@@ -91,7 +91,9 @@ public interface PlusItem extends Loadable {
     /**
      * @return The lore of the item
      */
-    String[] getLore();
+    default String[] getLore() {
+        return new String[]{};
+    }
 
     /**
      * @return The ID of the item

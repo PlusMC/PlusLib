@@ -6,6 +6,7 @@ import org.bukkit.block.Block;
 import org.bukkit.block.TileState;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
+import org.bukkit.event.block.Action;
 import org.bukkit.event.block.BlockPlaceEvent;
 import org.bukkit.event.entity.EntityDamageByEntityEvent;
 import org.bukkit.event.player.PlayerInteractEntityEvent;
@@ -158,6 +159,7 @@ public class PlusItemManager extends BaseManager {
                 //ignore
             }
 
+            //Get interaction for plusitems that are blocks
             Block block = e.getClickedBlock();
             if (block == null) return;
             if (!(block.getState() instanceof TileState state)) return;

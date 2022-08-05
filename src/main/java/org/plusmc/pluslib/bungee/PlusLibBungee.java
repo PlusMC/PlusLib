@@ -61,7 +61,7 @@ public class PlusLibBungee extends Plugin {
         this.task = scheduler.schedule(this, () -> {
             if (DatabaseHandler.getInstance() != null && DatabaseHandler.getInstance().isLoaded())
                 DatabaseHandler.getInstance().updateCache();
-        }, 30, 30, TimeUnit.SECONDS);
+        }, 5, 30, TimeUnit.SECONDS);
     }
 
     @Override
