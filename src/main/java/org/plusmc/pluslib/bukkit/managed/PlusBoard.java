@@ -47,7 +47,7 @@ public abstract class PlusBoard implements Tickable {
     }
 
 
-    //added a bunch of comments cause this shit is pretty confusing
+    //added a bunch of comments cause this is pretty confusing
     //im going to cry if this doesn't work
     @Override
     public void tick(long tick) {
