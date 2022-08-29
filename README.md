@@ -1,2 +1,2 @@
 # PlusLib
- plus libbbb
+A libray plugin for plusmc
