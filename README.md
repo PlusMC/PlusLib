@@ -5,9 +5,10 @@ A libray plugin for PlusMC plugins and Oakley's plugins
 
 ### Prerequisites
 - JDK 16
+- An IDE with manifold support (Optional) [Learn More About Manifold][1]
 
 ### Compile
-1. Clone this repository (`git clone https://github.com/PlusMC/Manhunt.git`)
+1. Clone this repository (`git clone https://github.com/PlusMC/PlusLib.git`)
 2. Confirm if the PlusLib-Core dependency is resolved, if not check [Other Notes](#other-notes)
 3. Run `maven package` and the jars should be at `target/`
 
