@@ -6,12 +6,12 @@
 
     <groupId>org.plusmc</groupId>
     <artifactId>PlusLib</artifactId>
-    <version>0.13.1-INDEV</version>
+    <version>0.14-INDEV</version>
     <packaging>jar</packaging>
 
     <name>PlusLib</name>
 
-    <description>A library plugin for the Plus MC server</description>
+    <description>A library plugin for the PlusMC server</description>
     <properties>
         <java.version>1.8</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -41,6 +41,11 @@
                             <groupId>systems.manifold</groupId>
                             <artifactId>manifold-ext</artifactId>
                             <version>${manifold.version}</version>
+                        </path>
+                        <path>
+                            <groupId>com.velocitypowered</groupId>
+                            <artifactId>velocity-api</artifactId>
+                            <version>3.1.2-SNAPSHOT</version>
                         </path>
                     </annotationProcessorPaths>
                 </configuration>
@@ -125,7 +130,7 @@
         </repository>
         <repository>
             <id>papermc</id>
-            <url>https://papermc.io/repo/repository/maven-public/</url>
+            <url>https://repo.papermc.io/repository/maven-public/</url>
         </repository>
         <repository>
             <id>maxhenkel</id>
@@ -141,9 +146,9 @@
             <scope>provided</scope>
         </dependency>
         <dependency>
-            <groupId>net.md-5</groupId>
-            <artifactId>bungeecord-api</artifactId>
-            <version>1.18-R0.1-SNAPSHOT</version>
+            <groupId>com.velocitypowered</groupId>
+            <artifactId>velocity-api</artifactId>
+            <version>3.1.2-SNAPSHOT</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
@@ -161,7 +166,7 @@
         <dependency>
             <groupId>org.plusmc</groupId>
             <artifactId>PlusLib-Core</artifactId>
-            <version>0.14-INDEV</version>
+            <version>0.15-INDEV</version>
         </dependency>
     </dependencies>
 

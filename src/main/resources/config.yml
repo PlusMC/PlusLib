@@ -6,7 +6,7 @@ Mongodb:
   username: ""
   password: ""
 
-
+# bukkit only
 VoiceChat:
   useVoiceChat: false
   keepAudioLoaded: true # If true, the audio will be loaded into memory. If false, the audio will be streamed from the server.

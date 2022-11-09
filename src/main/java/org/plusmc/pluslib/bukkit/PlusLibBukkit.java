@@ -6,7 +6,7 @@ import org.plusmc.pluslib.bukkit.util.BukkitUtil;
 import org.plusmc.pluslib.bukkit.util.BungeeUtil;
 import org.plusmc.pluslib.bukkit.voicechat.PlusLibVoicechat;
 import org.plusmc.pluslibcore.mongo.DatabaseHandler;
-import org.plusmc.pluslibcore.reflection.bungeebukkit.config.InjectableConfig;
+import org.plusmc.pluslibcore.reflection.velocitybukkit.config.InjectableConfig;
 
 import java.io.File;
 import java.io.IOException;
