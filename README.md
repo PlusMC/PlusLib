@@ -1,5 +1,5 @@
 # PlusLib
-A libray plugin for PlusMC plugins and Oakley's plugins
+A library plugin for PlusMC plugins and Oakley's plugins
 
 **AS OF VERSION 0.14-INDEV (0.15-INDEV CORE) BUNGEE WILL NOT BE SUPPORTED**
 
