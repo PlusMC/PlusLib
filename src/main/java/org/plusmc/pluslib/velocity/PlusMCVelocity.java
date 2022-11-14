@@ -1,7 +1,6 @@
 package org.plusmc.pluslib.velocity;
 
 import com.google.inject.Inject;
-import com.velocitypowered.api.event.EventTask;
 import com.velocitypowered.api.event.Subscribe;
 import com.velocitypowered.api.event.proxy.ProxyInitializeEvent;
 import com.velocitypowered.api.event.proxy.ProxyReloadEvent;
@@ -23,7 +22,7 @@ import java.util.Collection;
 import java.util.concurrent.TimeUnit;
 import java.util.logging.Logger;
 
-@Plugin(id = "plusmc", name = "PlusLib", version = "0.14-INDEV", description = "PlusLib for Velocity", authors = {"OakleyCord"})
+@Plugin(id = "pluslib-velocity", name = "PlusLib", version = "0.14-INDEV", description = "PlusLib for Velocity", authors = {"OakleyCord"})
 public class PlusMCVelocity {
     private final ProxyServer server;
     private final Logger logger;
@@ -97,7 +96,7 @@ public class PlusMCVelocity {
             task.cancel();
         }
 
-        //TODO: Make sure that use this are unloaded correctly with the new DatabaseHandler.stop() method
+        //TODO: Make sure that plugins that use this are unloaded correctly with the new DatabaseHandler.stop() method
         DatabaseHandler.stopInstance();
 
         loadDatabase();
