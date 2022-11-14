@@ -23,14 +23,14 @@ import java.util.concurrent.TimeUnit;
 import java.util.logging.Logger;
 
 @Plugin(id = "pluslib-velocity", name = "PlusLib", version = "0.14-INDEV", description = "PlusLib for Velocity", authors = {"OakleyCord"})
-public class PlusMCVelocity {
+public class PlusLibVelocity {
     private final ProxyServer server;
     private final Logger logger;
 
     private final Path dataDirectory;
 
     @Inject
-    public PlusMCVelocity(ProxyServer server, Logger logger, @DataDirectory Path dataDirectory) {
+    public PlusLibVelocity(ProxyServer server, Logger logger, @DataDirectory Path dataDirectory) {
         this.server = server;
         this.logger = logger;
         this.dataDirectory = dataDirectory;
